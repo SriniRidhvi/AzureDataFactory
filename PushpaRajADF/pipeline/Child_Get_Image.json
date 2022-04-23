@@ -4,6 +4,7 @@
 		"activities": [
 			{
 				"name": "Read_Json_From_blob",
+				"description": "This is from Feature Branch",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
