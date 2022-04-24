@@ -121,7 +121,17 @@
 				"outputs": [
 					{
 						"referenceName": "ds_final_metadata_json_sink",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Asset_Id": {
+								"value": "@pipeline().parameters.Asset_Id",
+								"type": "Expression"
+							},
+							"File_Name": {
+								"value": "@concat(pipeline().parameters.Asset_Id,'')",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
