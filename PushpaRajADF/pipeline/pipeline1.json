@@ -128,7 +128,7 @@
 								"type": "Expression"
 							},
 							"File_Name": {
-								"value": "@concat(pipeline().parameters.Asset_Id,'')",
+								"value": "metadata",
 								"type": "Expression"
 							}
 						}
