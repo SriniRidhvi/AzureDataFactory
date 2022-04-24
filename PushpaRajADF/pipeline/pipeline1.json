@@ -20,7 +20,10 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "content/asset/print/69892111",
+							"wildcardFolderPath": {
+								"value": "@concat('content/asset/print/',pipeline().parameters.Asset_Id)",
+								"type": "Expression"
+							},
 							"wildcardFileName": "*.json",
 							"enablePartitionDiscovery": false
 						},
@@ -117,12 +120,17 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "Json1",
+						"referenceName": "ds_final_metadata_json_sink",
 						"type": "DatasetReference"
 					}
 				]
 			}
 		],
+		"parameters": {
+			"Asset_Id": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
