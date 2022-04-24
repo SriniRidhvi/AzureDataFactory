@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "test"
+				"folderPath": "content/asset/print/69892111",
+				"container": "devpocconyt"
 			}
 		},
 		"schema": {
