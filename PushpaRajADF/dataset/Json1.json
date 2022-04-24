@@ -5,12 +5,27 @@
 			"referenceName": "AzureBlobStorage1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"Asset_Id": {
+				"type": "string"
+			},
+			"File_Name": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"folderPath": "ASSETS",
+				"fileName": {
+					"value": "@concat(dataset().File_Name,'.json')",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@concat('ASSETS/',dataset().Asset_Id)",
+					"type": "Expression"
+				},
 				"container": "devpocconyt"
 			}
 		},
