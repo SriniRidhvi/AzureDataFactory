@@ -23,7 +23,7 @@
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@concat('ASSETS/',dataset().Asset_Id)",
+					"value": "@concat('content/asset/metadata/',dataset().Asset_Id)",
 					"type": "Expression"
 				},
 				"container": "devpocconyt"
