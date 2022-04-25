@@ -32,7 +32,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"Asset_Id": {
-								"value": "@pipeline().parameters.Asset_ID",
+								"value": "@concat('content/asset/print/',pipeline().parameters.Asset_ID)",
 								"type": "Expression"
 							}
 						}
