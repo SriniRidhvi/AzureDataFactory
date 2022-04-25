@@ -417,6 +417,9 @@
 				"parameters": {
 					"Asset_Id": {
 						"type": "string"
+					},
+					"Folder_Name": {
+						"type": "string"
 					}
 				},
 				"annotations": [],
@@ -428,7 +431,10 @@
 							"value": "@concat(dataset().Asset_Id,'.json')",
 							"type": "Expression"
 						},
-						"folderPath": "ASSETS",
+						"folderPath": {
+							"value": "@dataset().Folder_Name",
+							"type": "Expression"
+						},
 						"container": "devpocconyt"
 					}
 				},
@@ -760,6 +766,10 @@
 									"Asset_Id": {
 										"value": "@pipeline().parameters.Asset_ID",
 										"type": "Expression"
+									},
+									"Folder_Name": {
+										"value": "@concat('content/asset/print/',pipeline().parameters.Asset_ID)",
+										"type": "Expression"
 									}
 								}
 							},
@@ -903,6 +913,10 @@
 								"parameters": {
 									"Asset_Id": {
 										"value": "@pipeline().parameters.Asset_Id",
+										"type": "Expression"
+									},
+									"Folder_Name": {
+										"value": "@concat('content/asset/print/',pipeline().parameters.Asset_ID)",
 										"type": "Expression"
 									}
 								}
